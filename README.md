@@ -10,7 +10,7 @@ Le Datalab permet aux statisticiens de découvrir, d'expérimenter, d'apprendre,
 Dans le monde professionnel, plusieurs problèmes se posent au statisticien :
 
 - sa machine n'est pas assez puissante
-- des problèmes de réplicabilité (le fameux ça marche sur mon ordi !)
+- des problèmes de réplicabilité (le fameux ça marche sur mon ordi!)
 - besoin de connaissances spécifiques pour installer des logiciels
 ...
 
@@ -22,10 +22,10 @@ pour l'instance du denes: vous avez un canal teams dédié
 A noter, tout le [code](https://github.com/InseeFrLab/onyxia){target="_blank"}. est opensource (ie: droit en lecture, libre redistribution du code, modification du code et utilisation du code). Ainsi, n'importe qui peut installer son propre datalab en se basant sur Onyxia ! 
 
 #### Des concepts
-Derrière Onyxia se cachent plusieurs concepts: l'utilisation de techbologies cloud natives, avoir une infrastructures qui permet d'avoir des ressources de calculs (CPU, RAM, GPU) et de stockage à disposition, avoir une interface graphique pour simplifier la vie des utilisateurs... Grâce à Onyxia un data scientists n'a pas besoin de connaissances spécifiques (Docker, Kubernetes, Helm, S3... ) pour obtenir un environnement de ravail.  La plateforme se présente comme un bac à sable et permet notamment de tester de nouvelles technologies et de se former en se concentrant sur le contenu plutôt que sur la configuration d'un environnement de travail. D'ailleurs vous utiliserez les datalabs au cours de vos prochains tp :)
+Derrière Onyxia se cachent plusieurs concepts: l'utilisation de technologies cloud natives, avoir une infrastructures qui permet d'avoir des ressources de calculs (CPU, RAM, GPU) et de stockage à disposition, avoir une interface graphique pour simplifier la vie des utilisateurs... Grâce à Onyxia, un data scientists n'a pas besoin de connaissances spécifiques (Docker, Kubernetes, Helm, S3... ) pour obtenir un environnement de travail fonctionnel. La plateforme se présente comme un bac à sable et permet notamment de tester de nouvelles technologies et de se former en se concentrant sur le contenu plutôt que sur la configuration d'un environnement de travail. D'ailleurs vous utiliserez les datalabs au cours de vos prochains tp :)
 Les datalabs donnent aux utilisateurs la possibilité de lancer de nombreux services préconfigurés à la demande (Jupyter, Rstudio, VSCode, PostgreSQL... et pleins d'autres n'hésitez pas à regarder !) avec une puissance de calcul adaptée aux besoins.
 L'utilisateur n'a pas besoin de connaissances spécifiques pour lancer un service mais s'il le désire, il peut se former : toutes les commandes que vous pourriez exécuter en ligne de commande sont visibles dans l'interface. 
-Les choix faits dans Onyxia sont conditionnés par le fait qu'il ne faut pas s'enfermer, le but est de rendre le logiciel facultatif. De sorte à ne pas s'enfermer dans un choix technologique et qu'il soit couteux d'en sortir.
+Les choix faits dans Onyxia sont conditionnés par le fait qu'il ne faut pas s'enfermer, le but est de rendre le logiciel facultatif. L'idée étant qu'il ne faut pas s'enfermer dans un choix technologique ni qu'il soit couteux d'en sortir.
 
 :warning:
 Ne déposez *jamais* de données sensibles sur le sspcloud ou l'instance du GENES ! D'ailleurs, il n'y a aucune garantie de service sur le sspcloud : la plateforme peut tomber en panne, il peut y avoir des attaques... donc soyez vigilants à vos usages.
@@ -41,10 +41,10 @@ NB: On distinguera 3 notions primordiales au cours du tp : l'environnement d'ex�
 
 Ce TP d'initiation vous permettra de faire vos premiers pas sur la plateforme :
  
-- Lancer vos premiers services
-- Configurer votre compte sur le datalab
-- Vous familiariser avec l'espace de stockage S3
-- Sauvegarder votre code, vos données
+- Lancer vos premiers services  
+- Configurer votre compte sur le datalab  
+- Vous familiariser avec l'espace de stockage S3  
+- Sauvegarder votre code, vos données  
 - Adopter de **bonnes pratiques** et **ne pas perdre votre travail** 😇
 
 ## Créer un compte
@@ -56,13 +56,14 @@ Vous pouvez réaliser ce TP soit sur :
   - Pour la création de compte, utilisez votre mail ENSAI prenom.nom@eleve.ensai.fr
 
 ## Lancer un service
+<details>
 
 ### Différents catalogues de services
 
 - [ ] Allez dans `Catalogue de services`
 
 Vous trouverez différents catalogues : que ce soit pour les environnements de développement intéractifs (IDE), les bases de données, de la datavisualisation...
-Cette année vous vous servirez principalement des services IDE et bases de données. Mais n'hésitez pas à faire un tour sur les autres catalogueus tout au long de votre scolarité !
+Cette année vous vous servirez principalement des services IDE et bases de données. Mais n'hésitez pas à faire un tour sur les autres catalogues tout au long de votre scolarité !
 
 ### Un premier service
 
@@ -75,9 +76,11 @@ Attendez quelques secondes le temps que le service se lance. Lisez bien la note 
 - [ ] Cliquez sur `Ouvrir le service` :rocket:
   - password : collez le mot de passe
 
-Votre service s'ouvre. Vous pouvez alors commencer à coder :)
+Votre service s'ouvre. Vous pouvez alors commencer à coder 😄
+</details>
 
 ## Configurer son service
+<details>
 
 Maintenant que nous savons lancer un service, revenons un petit peu en arrière et intéressons nous au formulaire présent lors du lancement du service. (Onglet 'Catalogue de services' et sélectionner un service vscode-python par exemple)
 
@@ -85,11 +88,13 @@ Maintenant que nous savons lancer un service, revenons un petit peu en arrière 
 
 * Onglet *Resources(CPU/RAM)* : vous choisissez les ressources dont disposera votre service. Notamment, vous choisissez les ressources qui seront garanties au lancement du service (requests) et les ressources qui pourront être utilisées au maximum par votre service (limits).  
 CPU (processeur) : il s'agit de la puissance de calcul allouée au service. Les CPU exécutent les instructions (ouvrir un programme, calculer, afficher des résulats) 
-RAM (mémoire vive): il s'agit de la mémoire de travail du service, elle garde temporairement ce que le service utilise pendant l'exécution: les dataframes, modèles, images. Elle n’est pas persistante : si le service s’arrête, la RAM est vidée (les fichiers survivent s’ils sont sur le volume persistant).
+RAM (mémoire vive): il s'agit de la mémoire de travail du service, elle garde temporairement ce que le service utilise pendant l'exécution: les dataframes, modèles, images... Elle n’est pas persistante : si le service s’arrête, la RAM est vidée (les fichiers survivent s’ils sont sur le volume persistant).
 
 * Onglet *Configuration for persistence* : détermine la taille du disque de travail “qui survit” quand le service est "fermé". Sans persistance, les services tournent dans des conteneurs éphémères : tout ce qui est seulement dedans peut disparaître à l’arrêt. Avec la persistance, un volume de stockage est attaché à ta session et conserve tes fichiers jusqu'à la désinstallation du service.
+</details>
 
 ## Premiers pas dans un service
+<details>
 
 - [ ] Créez un Notebook Python (fichier .ipynb)
 - [ ] Vérifiez que tout fonctionne bien, écrivez et exécutez une fonction python de votre choix, créez des dossiers, des fichiers, les renommer, supprimer, déplacer...
@@ -118,24 +123,26 @@ Pas de solution miracle, si ça vous arrive, il faudra tout recommencer. Comment
 
 Une option très rhébarbative et encourageant les erreurs serait de vous faire télécharger vos fichiers. Mais c'est très pénible surtout quand vous commencez à avoir beaucoup de fichiers et pleins de versions différentes.
 Nous allons donc utiliser un outil dédié à la gestion de versions de code: git. Cet outils est d'autant plus utile qu'il facilite la collaboration sur un projet.
+</details>
 
 ## Git
+<details>
 
-Git est un outil de gestion de versions. Vous l'utiliserez en complément d'une forge telle que github ou gitlab qui permettra de stocker votre code. Git vous permettra d'avoir une gestion propre de vos fichiers et de naviguer dans l'historique de votre code, voir les modifications apportées au fil du temps etc. 
+Git est un outil de gestion de versions. Vous l'utiliserez en complément d'une forge telle que [github](https://github.com/) ou [gitlab](https://about.gitlab.com/fr-fr/) qui permettra de stocker votre code. Git vous permettra d'avoir une gestion propre de vos fichiers et de naviguer dans l'historique de votre code, voir les modifications apportées au fil du temps etc. 
 Vous aurez bientôt un cours dédié à git donc on ne rentrera pas dans les détails ici. 
 
-NB : Le repo cloné est public et donc accessible à tous. Il se peut que vous ayez parfois besoin de travailler sur des repos privés. Il vous faudra donc renseigner un token qui permettra de vous authentifier. Pour vous éviter d'avoir à renseigner vos credentials à chaque fois que vous aurez besoin de vous authentifier, vous avez la possibilité de renseigner vos informations de connexion au sein du datalab dans l'onglet "Mon compte" > "Git". Les credentials définis seront alors injectés dans vos services sous forme de variable d'environnement.
+NB : Le repo cloné dans la suite du tp est public et donc accessible à tous. Il se peut que vous ayez parfois besoin de travailler sur des repos privés. Il vous faudra donc renseigner un token qui permettra de vous authentifier. Pour vous éviter d'avoir à renseigner vos credentials à chaque fois que vous aurez besoin de vous authentifier, vous avez la possibilité de renseigner vos informations de connexion au sein du datalab dans l'onglet "Mon compte" > "Git". Les credentials définis seront alors injectés dans vos services sous forme de variable d'environnement.
 
 - [ ] Se rendre dans l'onglet "Mon compte" puis l'onglet "Git"
-Bonus : Ajouter ses données d'authentification et faire ses premiers pas avec git, voir la fin du TP ou https://docs.sspcloud.fr/content/version-control.html#cr%C3%A9er-un-jeton-dacc%C3%A8s-token
+Bonus : Ajouter ses données d'authentification et faire ses premiers pas avec git, voir la partie *bonus: aller plus loin avec git* ou la [doc relative à la configuration de git sur le sspcloud](https://docs.sspcloud.fr/content/version-control.html#cr%C3%A9er-un-jeton-dacc%C3%A8s-token)
 
 - [ ] Cloner le repo du TP
 - [ ] Afficher les différentes contributions 
 
 Dans un terminal, effectuer les commandes suivantes : 
 ```
-git clone <le TP>
-cd <le TP>
+git clone <le TP> # Vous obtenez une copie du code dans un dossier correspondant au nom du projet cloné
+cd <le TP> # Vous vous déplacez au sein du dossier contenant le code
 git log --one-line
 ```
 Vous venez de créer une copie en local du repo distant et d'afficher l'historique des contributions au projet
@@ -144,12 +151,13 @@ NB: Il est aussi possible de réaliser ces étapes en passant par l'interface (*
 
 - [ ] Configurer un nouveau service à son lancement (onglet "Git") pour que le repo soit cloné directement 
 
-Comment synchroniser ce que vous avez en local ? et à distance ? La réponse début octobre. Et si vous êtes curieux, voici quelques ressources : 
-En revanche n'hésitez pas à lire "le tuto" & les "formations" sur le sujet: https://www.sspcloud.fr/catalog?path=Bonnes%E2%90%A3pratiques%E2%90%A3de%E2%90%A3d%C3%A9veloppement%E2%90%A3avec%E2%90%A3Git%E2%90%A3et%E2%90%A3R
+Comment synchroniser ce que vous avez en local ? et à distance ? La réponse début octobre. Et si vous êtes curieux, n'hésitez pas à [lire "le tuto" & les "formations" sur le sujet](https://www.sspcloud.fr/catalog?path=Bonnes%E2%90%A3pratiques%E2%90%A3de%E2%90%A3d%C3%A9veloppement%E2%90%A3avec%E2%90%A3Git%E2%90%A3et%E2%90%A3R) et à faire la partie bonus suivante.
 
-et à faire la partie suivante : 
+
+</details>
 
 ## Bonus : Aller plus loin avec Git 
+<details>
 
 ### Générer un token GitHub
 
@@ -234,8 +242,10 @@ Lancez un service *Jupyter Notebook*
 Vous savez désormais lancer des services et enregistrer votre code. Mais en tant que data scientist le coeur de métier ce sont... les données !
 Comment les importer et les sauvegarder après des traitements informatiques ?
 
+</details>
 
 ## Stockage S3
+<details>
 
 Les datalabs vous proposent de stocker vos données sur un espace dédié à cet effet en utilisant S3 (Simple Storage System). S3 est un **protocole de stockage objet** dérivé du service initialement offert par le cloud provider AWS.  
 
@@ -243,22 +253,21 @@ Vous aurez toujours besoin des deux éléments suivants :
 - URL de base du serveur S3 hébergé sur le sspcloud : https://minio.lab.sspcloud.fr  
 - Nom du bucket auquel vous souhaitez accéder; si vous souhaitez accéder à votre bucket personnel, il s'agit de votre nom d'utilisateur sur le sspcloud 
 
-Un bucket correspond en gros à un dossier à la racine du serveur S3. Les buckets permettent de séparer les usages, les permissions, les quotas ...  
-En fonction du serveur S3 que vous utilisez et des permissions que vous avez, vous pouvez avoir accès à tout ou partie d'un ou plusieurs buckets.
+Un bucket correspond en gros à un dossier à la racine du serveur S3. Les buckets permettent de séparer les usages, les permissions, les quotas ... En fonction du serveur S3 que vous utilisez et des permissions que vous avez, vous pouvez avoir accès à tout ou partie d'un ou plusieurs buckets.
 
 ### Authentification
 
-A part pour l'accès aux données explicitement rendues publiques (la gestion de la visibilité et des permissions sur les fichiers se fait en général via un système de policies qui n'est pas abordé ici), il faudra des informations d'authentification (credentials) pour communiquer avec l'API.  
-Ces credentials sont constitués d'un duo `access key` & `secret key` (en gros login / mot de passe) pour les comptes de service et d'un trio `access key`, `secret key`, `session token` pour les identités temporaires (credentials personnels, expirant au bout d'un certain temps).  
+A part pour l'accès aux données explicitement rendues publiques (la gestion de la visibilité et des permissions sur les fichiers se fait en général via un système de policies qui n'est pas abordé ici), il faudra des informations d'authentification (credentials) pour communiquer avec l'API s3.  
+Ces credentials sont constitués d'un duo `access key` & `secret key` (login / mot de passe) pour les comptes de service et d'un trio `access key`, `secret key`, `session token` pour les identités temporaires (credentials personnels, expirant au bout d'un certain temps).  
 
-Pourront être utilisées les variables d'environnements () suivantes, généralement reconnues par les bibliothèques standards S3 :
+Pourront être utilisées les variables d'environnements suivantes, généralement reconnues par les bibliothèques standards S3 :
 
 AWS_ACCESS_KEY_ID=my_access_key
 AWS_SECRET_ACCESS_KEY=my_secret_key
 AWS_SESSION_TOKEN = my_session_token
 ENDPOINT_URL = s3_endpoint
 
-Pour récupérer vos credentials, vous pouvez vous rendre sur 
+Pour récupérer vos informations d'authentification, vous pouvez vous rendre sur 
 - SSPCLOUD : onglet my account > Connect to storage et sélectionner `shell environment variable`
 
 ### Un client pour communiquer avec S3
@@ -296,7 +305,7 @@ https://pythonds.linogaliana.fr/content/modern-ds/s3.html#les-donn%C3%A9es-sur-l
 
 
 #### Revenons au TP
-Lorsque l'on travaille dans le cloud, il est essentiel de [séparer les données des programmes]{.underline} pour :
+Lorsque l'on travaille dans le cloud, il est essentiel de **séparer les données des programmes** pour :
 
 - mieux gérer les ressources
 - renforcer la sécurité en limitant les accès et les permissions
@@ -304,8 +313,7 @@ Lorsque l'on travaille dans le cloud, il est essentiel de [séparer les données
 - Un même code peut tourner sur plusieurs jeux de données. 
 
 ### Votre bucket
-
-Un **bucket** est un conteneur de stockage utilisé pour regrouper des objets (fichiers et métadonnées) dans des systèmes de stockage de type cloud. Il facilite l'organisation, la gestion des permissions et l'accès aux données dans un espace de stockage structuré.
+Un **bucket** est un conteneur dans lequel on stocke des objets (fichiers et métadonnées) dans des systèmes de stockage de type cloud. Il facilite l'organisation, la gestion des permissions et l'accès aux données.
 
 Lors de votre création de compte, un bucket est créé avec votre nom d'utilisateur. Dans ce bucket, vous pouvez :
 
@@ -320,15 +328,15 @@ Vous avez plusieurs possibilités pour gérer votre stockage :
 
 ### Stocker vos fichiers
 
-- [ ] Téléchargez ce fichier [parquet](data/.parquet){target="_blank"}
+- [ ] Téléchargez ce fichier [parquet](data/my-file.parquet)
 
 Ensuite, allez sur la page d'accueil du Datalab :
 
 - [ ] Allez dans `Mes fichiers`
-- [ ] Créez un dossier `Initiation` par exemple (organiser vos données comme vous le souhaitez !)
-- [ ] Téléversez votre fichier *parquet* dans le dossier `Initiation`
+- [ ] Créez un dossier `initiation` par exemple (organiser vos données comme vous le souhaitez !)
+- [ ] Téléversez votre fichier *parquet* dans le dossier `initiation`
 
-Vous remarquerez à droite, un encadré vert avec des lignes de commande du type `mc cp my-file.parquet s3/<username>/Initiation/my-file.parquet`.
+Vous remarquerez à droite, un encadré vert avec des lignes de commande du type `mc cp my-file.parquet s3/<username>/initiation/my-file.parquet`.
 
 Ce sont des commandes pour interagir avec votre stockage depuis un terminal (voir ci-après).
 
@@ -338,14 +346,14 @@ Cependant, vous pouvez extraire de ces commandes une information intéressante :
 
 ### Client MinIO
 
-Le [client MinIO](https://min.io/docs/minio/linux/reference/minio-mc.html){target="_blank"} installé et [utilisable depuis le terminal]{.underline} permet également d'interagir avec vos fichiers.
+Le [client MinIO](https://min.io/docs/minio/linux/reference/minio-mc.html) `mc` installé, configuré et utilisable depuis le terminal permet également d'interagir avec vos fichiers.
 
 Ouvrez un terminal (File :arrow_right: New :arrow_right: Terminal):
 
 - [ ] `mc ls s3/<username>/` : pour lister le contenu de votre dossier
-- [ ] `mc cp s3/<username>/output.csv .` : pour copier le fichier depuis s3 dans votre dossier courant 
+- [ ] `mc cp s3/<username>/initiation/my-file.parquet .` : pour copier le fichier depuis s3 dans votre dossier courant 
   - le fichier apparait dans votre explorer
-- [ ] Supprimez ce fichier car importer les fichiers de données dans son espace de travail n'est pas une bonne pratique : `rm output.csv`
+- [ ] Supprimez ce fichier car importer les fichiers de données dans son espace de travail n'est pas une bonne pratique : `rm my-file.parquet`
 
 La commande `mc --help` liste toutes les commandes possibles (ESPACE pour défiler, CTRL+C pour sortir)
 
@@ -451,7 +459,7 @@ Dans tous les cas, votre **guide de survie** pour lire des données (autre qu'un
 
 Ce fichier est stocké sur le bucket d'un autre utilisateur à l'adresse suivante :
 
-- SSP Cloud : `s3://inesh/diffusion/fichier.parquet`
+- SSP Cloud : `s3://inesh/diffusion/airports_fr.parquet`
 
 Malheureusement, la fonctionnalité n'est pas encore implémentée sur le Datalab du GENES. Les dossiers *diffusion* de chaque utilisateur ne sont pas accessibles en lecture. Il faudra les rendre accessibles soi-même.
 
@@ -468,21 +476,23 @@ Vous pouvez également exporter vos fichiers vers S3.
 
 Nous allons utiliser ici la librairie [s3fs](https://s3fs.readthedocs.io/){target="_blank"}.
 
-- [ ] Collez et lancez ce code :
+- [ ] utilisez le code suivant en veillant à bien rempacer le nom du bucket, l'emplement où vous souhaitez écrire votre fichier.
 
 ```python
-  import s3fs
-  
-  fs = s3fs.S3FileSystem(
-      client_kwargs={'endpoint_url': 'https://'+'minio-simple.lab.groupe-genes.fr'},
-      key = os.environ["AWS_ACCESS_KEY_ID"], 
-      secret = os.environ["AWS_SECRET_ACCESS_KEY"], 
-      token = os.environ["AWS_SESSION_TOKEN"])
-  
-  destination = f"s3://{s3_username}/initiation/output.csv"
-  
-  with fs.open(destination, mode='wb') as f:
-      top10f2021.write_csv(f)
+import os, s3fs
+
+# Create filesystem object
+S3_ENDPOINT_URL = "https://" + os.environ["AWS_S3_ENDPOINT"]
+fs = s3fs.S3FileSystem(client_kwargs={'endpoint_url': S3_ENDPOINT_URL})
+
+BUCKET_OUT = "<mon_bucket>"
+FILE_KEY_OUT_S3 = "initiation/output.csv"
+FILE_PATH_OUT_S3 = BUCKET_OUT + "/" + FILE_KEY_OUT_S3
+
+
+# Exemple si on souhaite exporter le dataframe df_bpe
+with fs.open(FILE_PATH_OUT_S3, 'w') as file_out:
+    df_bpe.to_csv(file_out)
 ```
 
 - [ ] Sur le Datalab, allez dans `Mes fichiers` > `initiation`
@@ -490,6 +500,9 @@ Nous allons utiliser ici la librairie [s3fs](https://s3fs.readthedocs.io/){targe
   - rafraichissez la page si besoin
 - [ ] Double-cliquez sur ce fichier pour en avoir un aperçu
 
+
+
+#### Un dernier exemple : TODO A FINALISER
 
 ``` python
   import pandas
@@ -513,8 +526,11 @@ python
 
 Vous avez créé un processus réplicable, qui traite un fichier sur S3 et écrit le résultat sur S3
 
+</details>
 
-# Behind the scene
+
+## Behind the scene
+<details>
 
 Onyxia injecte des variables d'environnement afin de vous proposer un environnement préconfiguré.
 
@@ -535,6 +551,7 @@ echo $AWS_ACCESS_KEY_ID   # affiche la valeur de la variable d'environnement
 Sys.getenv()
 ```
 Les variables d'environnement sont accessibles à tous les programmes qui tournent sur le service.
+</details>
 
 ## Configurer son service 
 
@@ -549,6 +566,8 @@ Onyxia retient ces paramètres pour vous
 
 
 ## Bonus
+<details>
+
 ### Surveiller son service
 
 - [ ] Sur la page du Datalab, allez dans `Mes services`
@@ -610,6 +629,7 @@ Dans votre servives, les deux variables d'environnement ont été créées.
 - Utiliser un script d'initialisation
 - Utilser sa propre image Docker
 
+</details>
 
 ## Libérer les ressources 
 
@@ -626,13 +646,15 @@ Vous pouvez aisément reproduire votre travail plus tard :
 - Il suffit de relancer un nouveau service et de relancer les calculs
 
 
-### Besoin d'assistance ? 
+## Besoin d'assistance ? 
 
 - Contactez l'équipe du SSP Cloud sur [Slack](https://join.slack.com/t/3innovation/shared_invite/zt-1bo6y53oy-Y~zKzR2SRg37pq5oYgiPuA){target="_blank"}
 - Pour le Datalab du GENES, vous trouverez sur la page d'accueil un lien pour rejoindre le canal Teams
 
 
 ### Bibliographie 
+- TP basé sur https://github.com/ludo2ne/ENSAI-1A-SQL/blob/main/doc/tp/tp3.qmd et https://github.com/InseeFrLab/ecosysteme-data
+
 - [Le SSPCLOUD : une fabrique créative pour accompagner les expérimentations des statisticiens publics](https://hal.science/hal-04263723v1/document)
 
 - [Utiliser RStudio sur l’environnement SSP Cloud](https://book.utilitr.org/01_R_Insee/Fiche_utiliser_Rstudio_SSPCloud.html){target="_blank"}, UtilitR
@@ -645,3 +667,5 @@ Vous pouvez aisément reproduire votre travail plus tard :
 ### Pour aller plus loin 
 
 Nous n'avons pas vraiment eu l'occasion de parler des dessous de la plateforme. Elle est construite sur un cluster Kubernetes. Et vous avez la possibilité d'interragir avec kubernetes en ligne de commande. Je vous laisse découvrir comment ça marche ici : https://github.com/olevitt/kubernetes
+
+
