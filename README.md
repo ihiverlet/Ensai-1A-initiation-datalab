@@ -51,8 +51,7 @@ Ce TP d'initiation vous permettra de faire vos premiers pas sur la plateforme :
 
 Vous pouvez réaliser ce TP soit sur :
 
-- Le [Datalab du GENES](https://onyxia.lab.groupe-genes.fr/)
-- Le [Datalab SSPCloud de l'INSEE](https://datalab.sspcloud.fr/)
+  - Le [Datalab SSPCloud de l'INSEE](https://datalab.sspcloud.fr/)
   - Pour la création de compte, utilisez votre mail ENSAI prenom.nom@eleve.ensai.fr
 
 ## Lancer un service
