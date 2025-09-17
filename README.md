@@ -14,12 +14,12 @@ Dans le monde professionnel, plusieurs problèmes se posent au statisticien :
 - besoin de connaissances spécifiques pour installer des logiciels
 ...
 
-À l'INSEE, un projet est né pour pallier à ce besoin : [Onyxia](https://www.onyxia.sh/){target="_blank"}. L'Insee met une instance de ce projet à disposition des administrations publiques et écoles : le [SSP Cloud](https://datalab.sspcloud.fr/){target="_blank"}.
+À l'INSEE, un projet est né pour pallier à ce besoin : [Onyxia](https://www.onyxia.sh/). L'Insee met une instance de ce projet à disposition des administrations publiques et écoles : le [SSP Cloud](https://datalab.sspcloud.fr/).
 Vous avez également accès à une seconde instance d'Onyxia gérée par le GENES. N'hésitez pas à créer un compte sur ces deux plateformes. Ces instances sont administrées par différentes équipes et proposent une offre de service différente. En cas de problème vous avez différents canaux de communication :
 pour le sspcloud : il faudra vous créer un compte slack
 pour l'instance du denes: vous avez un canal teams dédié
 
-A noter, tout le [code](https://github.com/InseeFrLab/onyxia){target="_blank"}. est opensource (ie: droit en lecture, libre redistribution du code, modification du code et utilisation du code). Ainsi, n'importe qui peut installer son propre datalab en se basant sur Onyxia ! 
+A noter, tout le [code](https://github.com/InseeFrLab/onyxia). est opensource (ie: droit en lecture, libre redistribution du code, modification du code et utilisation du code). Ainsi, n'importe qui peut installer son propre datalab en se basant sur Onyxia ! 
 
 #### Des concepts
 Derrière Onyxia se cachent plusieurs concepts: l'utilisation de technologies cloud natives, avoir une infrastructures qui permet d'avoir des ressources de calculs (CPU, RAM, GPU) et de stockage à disposition, avoir une interface graphique pour simplifier la vie des utilisateurs... Grâce à Onyxia, un data scientists n'a pas besoin de connaissances spécifiques (Docker, Kubernetes, Helm, S3... ) pour obtenir un environnement de travail fonctionnel. La plateforme se présente comme un bac à sable et permet notamment de tester de nouvelles technologies et de se former en se concentrant sur le contenu plutôt que sur la configuration d'un environnement de travail. D'ailleurs vous utiliserez les datalabs au cours de vos prochains tp :)
@@ -51,8 +51,8 @@ Ce TP d'initiation vous permettra de faire vos premiers pas sur la plateforme :
 
 Vous pouvez réaliser ce TP soit sur :
 
-- Le [Datalab du GENES](https://onyxia.lab.groupe-genes.fr/){target="_blank"} 
-- Le [Datalab SSPCloud de l'INSEE](https://datalab.sspcloud.fr/){target="_blank"} 
+- Le [Datalab du GENES](https://onyxia.lab.groupe-genes.fr/)
+- Le [Datalab SSPCloud de l'INSEE](https://datalab.sspcloud.fr/)
   - Pour la création de compte, utilisez votre mail ENSAI prenom.nom@eleve.ensai.fr
 
 ## Lancer un service
@@ -165,7 +165,7 @@ Si vous avez déjà généré et déclaré un jeton GitHub, inutile de refaire c
 
 - [ ] Connectez-vous à votre compte GitHub
 - [ ] Allez dans settings :arrow_right: Developer settings :arrow_right: Personal access tokens :arrow_right: Tokens (classic)
-- [ ] Générez un [nouveau jeton classique](https://github.com/settings/tokens/new){target="_blank"}
+- [ ] Générez un [nouveau jeton classique](https://github.com/settings/tokens/new)
   - Renseigner : 
     - nom du token : Datalab GENES
     - date d'expiration :arrow_right: Custom :arrow_right: 1 an
@@ -195,7 +195,7 @@ Vous pouvez maintenant échanger du code entre les services du Datalab et vos d�
 
 Avant de créer un service, nous allons créer un dépôt GitHub qui permettra de sauvegarder votre code.
 
-- [ ] Dans GitHub, créer un [nouveau Repository](https://github.com/new){target="_blank"}
+- [ ] Dans GitHub, créer un [nouveau Repository](https://github.com/new)
   - Repository name : TP-datalab
   - Private
   - :white_check_mark: Cochez *Add a README file*
@@ -474,7 +474,7 @@ De la même façon, vous pouvez rendre un fichier accessible aux autres utilisat
 
 Vous pouvez également exporter vos fichiers vers S3.
 
-Nous allons utiliser ici la librairie [s3fs](https://s3fs.readthedocs.io/){target="_blank"}.
+Nous allons utiliser ici la librairie [s3fs](https://s3fs.readthedocs.io/).
 
 - [ ] utilisez le code suivant en veillant à bien rempacer le nom du bucket, l'emplement où vous souhaitez écrire votre fichier.
 
@@ -657,11 +657,11 @@ Vous pouvez aisément reproduire votre travail plus tard :
 
 - [Le SSPCLOUD : une fabrique créative pour accompagner les expérimentations des statisticiens publics](https://hal.science/hal-04263723v1/document)
 
-- [Utiliser RStudio sur l’environnement SSP Cloud](https://book.utilitr.org/01_R_Insee/Fiche_utiliser_Rstudio_SSPCloud.html){target="_blank"}, UtilitR
-- [Formations et tutoriels du SSP Cloud](https://www.sspcloud.fr/formation){target="_blank"}
+- [Utiliser RStudio sur l’environnement SSP Cloud](https://book.utilitr.org/01_R_Insee/Fiche_utiliser_Rstudio_SSPCloud.html), UtilitR
+- [Formations et tutoriels du SSP Cloud](https://www.sspcloud.fr/formation)
   - Nombreux tutos : Python, R, ML, Spark, Cartographie 
-- [Doc SSP Cloud](https://docs.sspcloud.fr/){target="_blank"}
-- [Principes du Datalab](https://docs.sspcloud.fr/content/principles.html){target="_blank"}
+- [Doc SSP Cloud](https://docs.sspcloud.fr/)
+- [Principes du Datalab](https://docs.sspcloud.fr/content/principles.html)
 
 
 ### Pour aller plus loin 
