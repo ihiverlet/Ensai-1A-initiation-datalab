@@ -143,7 +143,7 @@ Dans un terminal, effectuer les commandes suivantes :
 ```
 git clone <le TP> # Vous obtenez une copie du code dans un dossier correspondant au nom du projet cloné
 cd <le TP> # Vous vous déplacez au sein du dossier contenant le code
-git log --one-line
+git log --oneline
 ```
 Vous venez de créer une copie en local du repo distant et d'afficher l'historique des contributions au projet
 
