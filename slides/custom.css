@@ -1,0 +1,66 @@
+/* Palette SSP Cloud : bleu #3559FC, sombre #22252F, clair #ECEDF2 */
+
+/* Logo Onyxia recoloré en bleu (remplace celui de logo.css).
+   Défini ici et non dans sspcloud.scss : l'url est résolue par rapport au fichier css. */
+body:after {
+  content: url(logo-sspcloud.svg) !important;
+}
+
+/* Encadré exercice */
+.exo {
+  border-left: 8px solid #3559FC;
+  background: rgba(53, 89, 252, 0.07);
+  padding: 0.4em 0.9em;
+  margin: 0.4em 0;
+  border-radius: 6px;
+}
+
+.exo > p:first-child {
+  font-weight: bold;
+  color: #3559FC;
+  margin-top: 0.2em;
+}
+
+/* Boutons façon GitHub / Onyxia */
+.green-button {
+  background: #2da44e;
+  color: white;
+  border-radius: 6px;
+  padding: 0.05em 0.5em;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.ui {
+  background: white;
+  border: 1px solid #22252F;
+  border-radius: 4px;
+  padding: 0 0.35em;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* Les 3 notions clés */
+.trio {
+  display: flex;
+  gap: 0.6em;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.trio > div {
+  flex: 1;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-size: 0.8em;
+  background: white;
+}
+
+.trio .exec { border: 3px solid #3559FC; }
+.trio .data { border: 3px solid #BDCDFF; background: #F6F7F9; }
+.trio .code { border: 3px solid #9AA6BE; background: #F6F7F9; }
+.trio .off  { opacity: 0.3; }
+
+.petit {
+  font-size: 0.75em;
+}

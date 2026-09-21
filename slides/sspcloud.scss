@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+// Palette du SSP Cloud (PALETTE_OVERRIDE de https://datalab.sspcloud.fr)
+$sspcloud-blue: #3559FC;
+$sspcloud-blue-light: #4775FF;
+$sspcloud-dark: #22252F;
+$sspcloud-light: #ECEDF2;
+
+$body-color: $sspcloud-dark;
+$body-bg: $sspcloud-light;
+$link-color: $sspcloud-blue;
+$light-bg-text-color: $sspcloud-dark;
+$light-bg-link-color: $sspcloud-blue;
+$light-bg-code-color: $sspcloud-blue;
+$dark-bg-text-color: $sspcloud-light;
+$dark-bg-link-color: $sspcloud-blue-light;
+$presentation-heading-color: $sspcloud-dark;
+
+// Taille du texte réduite (Onyxia : 36px)
+$presentation-font-size-root: 28px;
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.4em;
+$code-block-font-size: 0.7em;
+
+/*-- scss:rules --*/
+.bleu {
+  color: $sspcloud-blue;
+}

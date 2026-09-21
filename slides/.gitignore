@@ -1,0 +1,9 @@
+# Sorties de quarto render
+index.html
+index_files/
+/.quarto/
+
+# Ressources copiées depuis _extensions/InseeFrLab/onyxia/ au rendu
+/background.svg
+/logo.svg
+/favicon-32x32.png
