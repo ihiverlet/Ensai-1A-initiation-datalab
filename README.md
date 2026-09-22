@@ -1,6 +1,14 @@
 
 # Découverte du Datalab
 
+⚠️
+
+Ceci est une vieille version. pour la version la plus récente, rdv : https://ihiverlet.github.io/Ensai-1A-initiation-datalab/
+
+⚠️
+
+
+
 ## Introduction 
 <details>
 Le Datalab permet aux statisticiens de découvrir, d'expérimenter, d'apprendre, de se former aux outils de la data.
