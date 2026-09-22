@@ -28,7 +28,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render slides
-        run: quarto render slides
+        run: quarto render slides/index.qmd
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
